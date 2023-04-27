@@ -25,10 +25,12 @@ app.get("/", (req: Request, res: Response) => {
 app.get("/contracts/:contractAddress/abi", (req: Request, res: Response) => {
   const { contractAddress } = req.params;
   if (!Web3.utils.isAddress(contractAddress)) {
-    res.status(400).json({ status: 400, message: "Contract Address invalid" });
+    return res
+      .status(400)
+      .json({ status: 400, message: "Contract Address invalid" });
   }
   const contractAbi = new ContractAbi(contractAddress);
-  contractAbi.fetchAbi().then((abi) =>
+  return contractAbi.fetchAbi().then((abi) =>
     res.send({
       contractAddress: contractAddress,
       abi,
