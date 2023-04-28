@@ -85,7 +85,6 @@ app.post(
     const result = validationResult(req);
     if (result.isEmpty()) {
       const contractAbi = new ContractAbi(contractAddress);
-      const abiItem = await contractAbi.getAbiFunction(name, inputs.length);
       return contractAbi
         .runFunction(
           name,
