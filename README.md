@@ -13,6 +13,7 @@ npm start
 Make a copy of `.env-sample` and rename it to `.env` and fill in the values. You will need the following:
 
 - Etherscan API Key
+- Ethereum RPC URL
 
 ## Start Development
 
