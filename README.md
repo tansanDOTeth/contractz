@@ -3,6 +3,7 @@
 ## Start Development
 
 ```bash
+cd frontend/
 npm start
 ```
 
@@ -18,5 +19,6 @@ Make a copy of `.env-sample` and rename it to `.env` and fill in the values. You
 ## Start Development
 
 ```bash
+cd backend/
 npm start:dev
 ```
