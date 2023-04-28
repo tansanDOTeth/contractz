@@ -109,7 +109,6 @@ export default function App() {
               disabled={isFetching} />
             : <Typography color={grey[500]}>Select a function</Typography>
           }
-          {console.log(contractFunctionInputs)}
 
           <Button variant="contained" onClick={handleRun} disabled={isFetching || contractFunction?.inputs.length !== contractFunctionInputs.filter(input => 'value' in input && input.value.length > 0).length}>Run</Button>
 
