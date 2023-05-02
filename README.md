@@ -2,6 +2,8 @@
 
 ## Start Development
 
+Make a copy of `.env-sample` and rename it to `.env` and fill in the values.
+
 ```bash
 cd frontend/
 npm start
